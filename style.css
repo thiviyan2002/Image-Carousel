@@ -1,0 +1,78 @@
+body{
+    background-color: rgb(230, 230, 230); /* Lighter gray color *//*rgb(243, 226, 229);*/
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+}
+.carousel{
+    overflow: hidden; 
+    width: 600px;
+}  
+.wrap{
+    display: grid; 
+    grid-auto-flow: column;
+    grid-auto-columns: 250px; 
+    justify-items: stretch;
+    animation: slide 15s linear infinite;
+} 
+.wrap img{
+    width: 200px; 
+    height: 200px; 
+    border-radius: 15px;
+    object-fit: cover;
+}
+@keyframes slide{
+    to{
+        translate: calc(-4 * 250px);
+    }
+}
+/*body { 
+    background-color: rgb(243, 226, 229); 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0; 
+}
+
+.carousel { 
+    overflow: hidden; 
+    width: 600px; 
+}  
+
+.wrap { 
+    display: grid; 
+    grid-auto-flow: column; 
+    grid-auto-columns: 250px; 
+    justify-items: stretch; 
+    animation: slide 20s linear infinite; /* Increased time for a smoother effect */
+/*} 
+
+.wrap img { 
+    width: 200px; 
+    height: 200px; 
+    border-radius: 15px; 
+    object-fit: cover; 
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0); /* Start at the first image */
+    /*}
+    to {
+        transform: translateX(calc(-8 * 250px)); /* Move by the width of all images */
+    /*}
+}*/
+
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%;
+    }
+
+    .wrap img {
+        width: 150px;
+        height: 150px;
+    }
+}
